@@ -11,7 +11,6 @@ int prims(vector<Pair> adj[],int n,int e)
 	int src=1;
 	pq.push(make_pair(0,src));
 	key[src]=0;
-	inMst[src]=true;
 	while(!pq.empty())
 	{
 		int a=pq.top().second;
