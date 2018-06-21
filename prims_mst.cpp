@@ -26,17 +26,12 @@ int prims(vector<Pair> adj[],int n,int e)
 			}
 		}
 	}
+    int mst_sum=0;
 	for(int i=2;i<=n;i++)
-		cout<<parent[i]<<" "<<i<<endl;
-	int mst_sum=0;
-	for(int i=2;i<=n;i++)
-	{
-		for(auto itr=adj[i].begin();itr!=adj[i].end();itr++)
-		{
-			if(itr->first==parent[i])
-			mst_sum+=itr->second;
-		}
-	}
+    {
+		cout<<parent[i]<<" "<<i<<key[i]<<endl;
+        mst_sum+=key[i];
+    }
 	return mst_sum;
 }
 int main() {
